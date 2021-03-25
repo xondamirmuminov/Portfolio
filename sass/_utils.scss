@@ -1,0 +1,49 @@
+.btn {
+    font-size: 14px;
+    padding: 7px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: $speed;
+    cursor: pointer;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.btn-lg {
+    font-size: 16px;
+    padding: 12px 25px;
+}
+
+.btn-active {
+    background-color: $orange;
+    border-color: $orange;
+    color: #fff;
+}
+
+.btn-outline-active {
+    background-color: transparent;
+    border-color: $orange;
+    color: $orange;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    &:hover {
+        @extend .btn-active;
+        transition: $speed;
+    }
+}
+.d-flex {
+    display: flex;
+}
+.j-beetwen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.j-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,107 @@
+.text-active {
+    color: $orange;
+}
+
+.text-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.w-100 {
+    width: 100%;
+}
+.w-88 {
+    width: 88%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-25 {
+    width: 25%;
+}
+
+.text-dark {
+    color: $dark;
+}
+
+$size: 10;
+$max-size: 120;
+
+@while $size < $max-size {
+    .fs-#{$size} {
+        font-size: #{$size}px;
+    }
+    $size: $size+2;
+}
+
+$ms:10;
+$max-ms:120;
+    
+@while $ms < $max-ms {
+    .m-#{$ms} {
+        margin: #{$ms}px;
+    }
+    .my-#{$ms} {
+        margin-top: #{$ms}px;
+        margin-bottom: #{$ms}px;
+    }
+    .mx-#{$ms} {
+        margin-right: #{$ms}px;
+        margin-left: #{$ms}px;
+    }
+    .mr-#{$ms} {
+       margin-right: #{$ms}px;
+    }
+    .ml-#{$ms} {
+        margin-left: #{$ms}px;
+    }
+    .mt-#{$ms} {
+       margin-top: #{$ms}px;
+    }
+    .mb-#{$ms} {
+        margin-bottom: #{$ms}px;
+    }
+    $ms: $ms+2;
+}
+
+$ps:10;
+$max-ps:120;
+
+@while $ps < $max-ps {
+    .p-#{$ps} {
+       padding: #{$ps}px;
+    }
+    .py-#{$ps} {
+       padding-top: #{$ps}px;
+       padding-bottom: #{$ps}px;
+    }
+    .px-#{$ps} {
+       padding-right: #{$ps}px;
+       padding-left: #{$ps}px;
+    }
+    .pr-#{$ps} {
+      padding-right: #{$ps}px;
+    }
+    .pl-#{$ps} {
+       padding-left: #{$ps}px;
+    }
+    .pt-#{$ps} {
+      padding-top: #{$ps}px;
+    }
+    .pb-#{$ps} {
+       padding-bottom: #{$ps}px;
+    }
+    $ps: $ps+2;
+}
