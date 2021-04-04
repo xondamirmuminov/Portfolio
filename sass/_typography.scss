@@ -10,6 +10,21 @@
     color: #fff;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.header__list--active {
+    width: 100% !important;
+    height: 85vh !important;
+    top: 80px !important;
+    opacity: 1 !important;
+}
+
 .w-100 {
     width: 100%;
 }

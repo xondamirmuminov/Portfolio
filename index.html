@@ -16,9 +16,11 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,10 +33,14 @@
                         <i class="fab fa-xing fs-80 logo text-active "></i>
                     </a>
                 </div>
-                <div>
-                    <a href="#">
-                        <i class="fas fa-bars header__bars"></i>
-                    </a>
+                <div class="header__inner-bars">
+                    <div class=" header__bars-inner">
+                    <a href="#" onclick="bars()">
+                            <span class="bars-item bars-item--first"></span>
+                            <span class="bars-item bars-item--none"></span>
+                            <span class="bars-item"></span>
+                        </a>
+                    </div>
                 </div>
                 <ul class="header__list">
                     <li class="header__list-item">
@@ -45,11 +51,6 @@
                     <li class="header__list-item">
                         <a class="header__list-link" href="#about">
                             About
-                        </a>
-                    </li>
-                    <li class="header__list-item">
-                        <a class="header__list-link" href="#service">
-                           Service
                         </a>
                     </li>
                     <li class="header__list-item">
@@ -91,8 +92,8 @@
                     </div>
                 </div>
                 <div class="home__block home__block--img w-50">
-                    <img class="home__img"
-                        src="https://wp.quomodosoft.com/growth/wp-content/uploads/2019/10/hero_1.png" alt="">
+                    <img class="home__img" src="https://wp.quomodosoft.com/growth/wp-content/uploads/2019/10/hero_1.png"
+                        alt="">
                 </div>
             </div>
             <div class="home__animate-inner-2 pl-20">
@@ -101,8 +102,9 @@
                 </div>
             </div>
         </div>
-        <div class="home__tab w-88 m-auto">
+        <div class="home__tab tabs w-88 m-auto">
             <input type="radio" id="check-1" checked name="myradio" />
+
             <div class="home__tab-item-footer d-flex" id="check-box">
                 <div class="w-40 mr-40 home__tab-block">
                     <img class="home__tab-img  w-100" src="img/about-pic.png" alt="">
@@ -127,11 +129,11 @@
             </label>
             <input type="radio" id="check-2" name="myradio" />
             <div class="home__tab-item-footer home__tab-item-footer-2 d-flex" id="check-box-2">
-                <div class="w-50">
+                <div class="home__tab-volume-block w-50">
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">COMMUNICATION</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">COMMUNICATION</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -142,9 +144,9 @@
                         </div>
                     </div>
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">ORGANIZATION</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">ORGANIZATION</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -155,9 +157,9 @@
                         </div>
                     </div>
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">ANALYTICAL ABILITIES</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">ANALYTICAL ABILITIES</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -168,9 +170,9 @@
                         </div>
                     </div>
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">CREATIVITY</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">CREATIVITY</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -181,11 +183,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-50 ml-80">
+                <div class="home__tab-volume-block w-50 ml-80">
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">PROJECT MANAGEMENT</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">PROJECT MANAGEMENT</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -196,9 +198,9 @@
                         </div>
                     </div>
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">PERSEVERANCE</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">PERSEVERANCE</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -209,9 +211,9 @@
                         </div>
                     </div>
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">PROBLEM SOLVING</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">PROBLEM SOLVING</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -222,9 +224,9 @@
                         </div>
                     </div>
                     <div>
-                        <div class="j-beetwen">
-                            <div class="text-white mr-118">RESOURCEFULNESS</div>
-                            <div class="text-active ml-118">75%</div>
+                        <div class=" j-beetwen">
+                            <div class="home__tab-volume-title text-white mr-118">RESOURCEFULNESS</div>
+                            <div class="home__tab-volume-text text-active ml-118">75%</div>
                         </div>
                         <div class="mt-30 mb-60">
                             <div class="home__tab-volume">
@@ -273,8 +275,8 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about__inner">
-                <div class="text-active">MY PROJECTS</div>
-                <h2 class="about__title text-white fs-48 mt-4">Projects
+                <div class="text-active text-center">MY PROJECTS</div>
+                <h2 class="about__title text-white text-center fs-48 mt-4">Projects
                 </h2>
                 <div class="about__card-inner mt-40">
                     <div class="about__card  ml-34">
@@ -285,7 +287,8 @@
                             <p class="about__card-text text-white">Spaces is a template developed by Khandamir Muminov
                                 that includes 37 hand-crafted presentations and control panel pages, more than 700
                                 individual components, and powerful workflow tools, such as Sass.</p>
-                            <a class="about__card-btn mt-12 btn-lg btn-outline-active" target="_blank" href="https://xondamirmuminov.github.io/spaces.com/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active" target="_blank"
+                                href="https://xondamirmuminov.github.io/spaces.com/">READ MORE</a>
                         </div>
                     </div>
                     <div class="about__card  ml-34">
@@ -296,7 +299,8 @@
                             <p class="about__card-text text-white">Geeks is a template developed by Khandamir Muminov
                                 that includes 37 hand-crafted presentations and control panel pages, more than 700
                                 individual components, and powerful workflow tools, such as Bootstrap.</p>
-                            <a class="about__card-btn mt-12 btn-lg btn-outline-active" href=" https://xondamirmuminov.github.io/geeks.com/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active"
+                                href=" https://xondamirmuminov.github.io/geeks.com/">READ MORE</a>
                         </div>
                     </div>
                     <div class="about__card  ml-34">
@@ -307,7 +311,8 @@
                             <p class="about__card-text text-white">Indicorp is a page developed by Khandamir Muminov
                                 that includes 1 hand-crafted presentations and control panel pages, more than 300
                                 individual components, and powerful workflow tools, such as Sass.</p>
-                            <a class="about__card-btn mt-12 btn-lg btn-outline-active" href=" https://xondamirmuminov.github.io/Indicorp/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active"
+                                href=" https://xondamirmuminov.github.io/Indicorp/">READ MORE</a>
                         </div>
                     </div>
                     <div class="about__card  ml-34">
@@ -318,7 +323,8 @@
                             <p class="about__card-text text-white">Linkedin is a page developed by Khandamir Muminov
                                 that includes 1 hand-crafted presentations and control panel pages, more than 300
                                 individual components, and powerful workflow tools, such as Css.</p>
-                            <a class="about__card-btn mt-12 btn-lg btn-outline-active" href=" https://xondamirmuminov.github.io/LinkedIn/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active"
+                                href=" https://xondamirmuminov.github.io/LinkedIn/">READ MORE</a>
                         </div>
                     </div>
                     <div class="about__card  ml-34">
@@ -329,7 +335,8 @@
                             <p class="about__card-text text-white">Pixabay is a page developed by Khandamir Muminov that
                                 includes 1 hand-crafted presentations and control panel pages, more than 300 individual
                                 components, and powerful workflow tools, such as Css and Bootstrap.</p>
-                                <a class="about__card-btn mt-12 btn-lg btn-outline-active" href="https://xondamirmuminov.github.io/pixabay/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active"
+                                href="https://xondamirmuminov.github.io/pixabay/">READ MORE</a>
                         </div>
                     </div>
                     <div class="about__card  ml-34">
@@ -340,7 +347,8 @@
                             <p class="about__card-text text-white">Productly is a page developed by Khandamir Muminov
                                 that includes 1 hand-crafted presentations and control panel pages, more than 300
                                 individual components, and powerful workflow tools, such as Css.</p>
-                                <a class="about__card-btn mt-12 btn-lg btn-outline-active" href=" https://xondamirmuminov.github.io/Productly/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active"
+                                href=" https://xondamirmuminov.github.io/Productly/">READ MORE</a>
                         </div>
                     </div>
                     <div class="about__card  ml-34">
@@ -351,7 +359,8 @@
                             <p class="about__card-text text-white">Weather is a page developed by Khandamir Muminov that
                                 includes 1 hand-crafted presentations and control panel pages, more than 300 individual
                                 components, and powerful workflow tools, such as Css.</p>
-                                <a class="about__card-btn mt-12 btn-lg btn-outline-active" href=" https://xondamirmuminov.github.io/Weather/">READ MORE</a>
+                            <a class="about__card-btn mt-12 btn-lg btn-outline-active"
+                                href=" https://xondamirmuminov.github.io/Weather/">READ MORE</a>
                         </div>
                     </div>
                 </div>
@@ -360,8 +369,8 @@
         <div class="about__main mt-118 pt-60  pb-60">
             <div class="container">
                 <div class="about__main-inner">
-                    <div class="text-active">TESTIMONIALS</div>
-                    <h2 class="about__title text-white fs-48 mt-4">Our Workers Says
+                    <div class="text-active text-center">TESTIMONIALS</div>
+                    <h2 class="about__title text-white fs-48 mt-4 text-center">Our Workers Says</h2>
                         <div class="about__slider">
                             <div class="about__slider-item">
                                 <div class="about__main-card  p-20">
@@ -397,8 +406,8 @@
                                             <div>
                                                 <h2 class="aout__main-card-title text-white fs-28">Ahmadjon Abdusamadov
                                                 </h2>
-                                                <div class="text-active text-poppins  fs-16">Full Stack developer 
-                                                 </div>
+                                                <div class="text-active text-poppins  fs-16">Full Stack developer
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -416,7 +425,8 @@
                                     <div class="about__main-card-header">
                                         <div class="about__main-card-header-inner">
                                             <div>
-                                                <img class="about__main-card-img mr-10" src="img/photo_2021-02-10_23-08-51.jpg" alt="">
+                                                <img class="about__main-card-img mr-10"
+                                                    src="img/photo_2021-02-10_23-08-51.jpg" alt="">
                                             </div>
                                             <div>
                                                 <h2 class="aout__main-card-title text-white fs-28">Farruxbek Abdullayev
@@ -537,7 +547,8 @@
                                             <div>
                                                 <h2 class="aout__main-card-title text-white fs-28">Umidjon Esirgapov
                                                 </h2>
-                                                <div class="text-active text-poppins  fs-16">Marketolog and SMM Designer</div>
+                                                <div class="text-active text-poppins  fs-16">Marketolog and SMM Designer
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -557,25 +568,27 @@
         <div class="about__contact">
             <div class="container">
                 <div class="about__contact-inner">
-                    <div class="text-active">SOCIAL MEDIA</div>
-                    <h2 class="about__title text-white fs-48 mt-4">Let’s Be Friends
+                    <div class="text-active text-center">SOCIAL MEDIA</div>
+                    <h2 class="about__title text-center text-white fs-48 mt-4">Let’s Be Friends
                         <div class="about__contact-card-inner">
                             <div class="about__contact-card">
                                 <div>
                                     <h3 class="about__contact-card-title fs-26 mb-4">Linkedin</h3>
-                                    <div class="about__contact-card-text text-active  fs-16">Proffessional social profile</div>
+                                    <div class="about__contact-card-text text-active  fs-16">Proffessional social
+                                        profile</div>
                                 </div>
                                 <div>
-                                    <i class="fab fa-linkedin-in text-dark fs-58"></i>
+                                    <i class="fab fa-linkedin-in about__contact-icon text-dark fs-58"></i>
                                 </div>
                             </div>
                             <div class="about__contact-card">
                                 <div>
                                     <h3 class="about__contact-card-title fs-26 mb-4">Instagram</h3>
-                                    <div class="about__contact-card-text text-active  fs-16">Image base social communications</div>
+                                    <div class="about__contact-card-text text-active  fs-16">Image base social
+                                        communications</div>
                                 </div>
                                 <div>
-                                    <i class="fab fa-instagram text-dark fs-58"></i>
+                                    <i class="fab fa-instagram about__contact-icon text-dark fs-58"></i>
                                 </div>
                             </div>
                             <div class="about__contact-card">
@@ -584,16 +597,16 @@
                                     <div class="about__contact-card-text text-active fs-16">Random thoughts</div>
                                 </div>
                                 <div>
-                                    <i class="fab fa-twitter text-dark fs-58"></i>
+                                    <i class="fab fa-twitter about__contact-icon text-dark fs-58"></i>
                                 </div>
                             </div>
                             <div class="about__contact-card">
                                 <div>
                                     <h3 class="about__contact-card-title fs-26 mb-4">Email</h3>
-                                    <div class="about__contact-card-text text-active fs-16">xondamir.muminov2008@gmail.com</div>
+                                    <div class="about__contact-card-text text-active fs-16">xondamir.muminov2008@</div>
                                 </div>
                                 <div>
-                                    <i class="fas fa-envelope text-dark fs-58"></i>
+                                    <i class="fas fa-envelope about__contact-icon text-dark fs-58"></i>
                                 </div>
                             </div>
                         </div>
@@ -601,36 +614,12 @@
             </div>
         </div>
     </section>
-    <section id="service" class="service">
-        <div class="container">
-            <div class="service__inner">
-                <h1 class="service__title  text-white fs-40">This is My Expertise, The Services I'll Provide My Clients</h1>
-                <div class="service__card-inner">
-                    <div class="service__card">
-                        <i class="fas fa-mobile-alt service__card-icon text-active fs-80"></i>
-                        <h2 class="service__card-title mt-20">Mobile Apps</h2>
-                        <p class="service__card-text">I create all kinds of mobile apps for my clients. These mobile apps meet world standards.These mobile apps are also rated according to their size.</p>
-                    </div>
-                    <div class="service__card">
-                        <i class="fas fa-desktop service__card-icon text-active fs-80"></i>
-                        <h2 class="service__card-title mt-20">Web Applications</h2>
-                        <p class="service__card-text">I create all kinds of web applications and web siteis for my clients. These web applications and web siteis meet world standards.These web applications and web siteis are also rated according to their size.</p>
-                    </div>
-                    <div class="service__card">
-                        <i class="fas fa-mobile-alt service__card-icon text-active fs-80"></i>
-                        <h2 class="service__card-title mt-20">Responsive Design</h2>
-                        <p class="service__card-text">I create all kinds of mobile apps and Web applecations responsive for my clients. These mobile apps and web applecations responsive meet world standards.These mobile apps and web applecations responsive are also rated according to their size.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact__inner">
-                <div class="text-active fs-19">CONTACT ME</div>
-                <h1 class="contact__title text-white fs-40">Let's Chat</h1>
-                <div class="text-white fs-16">Fill this out so we can learn more about you and your needs.</div>
+                <div class="text-active fs-19 text-center">CONTACT ME</div>
+                <h1 class="contact__title text-white text-center fs-40">Let's Chat</h1>
+                <div class="text-white fs-16 text-center">Fill this out so we can learn more about you and your needs.</div>
             </div>
             <div class="contact__form-inner">
                 <form class="contact__form">
@@ -642,34 +631,34 @@
                     </div>
                     <div class="contact__form-block w-50">
                         <input type="date" class="contact__form-inp" placeholder="Full name">
-                        <textarea  class="contact__form-inp" cols="60" rows="8"></textarea>
+                        <textarea class="contact__form-inp" cols="60" rows="8"></textarea>
                     </div>
                 </form>
-                <button class="btn-outline-active btn-lg">
+                <button class="btn-outline-active btn-lg contact__btn">
                     PROJECT ESTIMATE</button>
-                    <div class="d-flex j-evenly">
-                        <div class="mt-80">
-                            <div class="d-flex">
-                                <i class="fas fa-envelope text-active fs-26"></i>
-                                <div class="text-active fs-22 ml-18">Email:</div>
-                            </div>
-                            <div class="text-white fs-18 mt-16">xondamir.muminov2008@gmail.com</div>
+                <div class="contact__footer d-flex j-evenly">
+                    <div class="mt-80 ml-40 contact__footer-block">
+                        <div class="d-flex">
+                            <i class="fas fa-envelope text-active fs-26"></i>
+                            <div class="text-active fs-22 ml-18">Email:</div>
                         </div>
-                        <div class="mt-80">
-                            <div class="d-flex">
-                                <i class="fas fa-phone text-active fs-26"></i>
-                                <div class="text-active fs-22 ml-18">Phone:</div>
-                            </div>
-                            <div class="text-white fs-18 mt-16">+99890 229 41 60</div>
-                        </div>
-                        <div class="mt-80">
-                            <div class="d-flex">
-                                <i class="fas fa-map-marker text-active fs-26"></i>
-                                <div class="text-active fs-22 ml-18">Address:</div>
-                            </div>
-                            <div class="text-white fs-18 mt-16">Uzbekistan, Jizzax</div>
-                        </div>
+                        <div class="text-white fs-18 mt-16">xondamir.muminov2008@gmail.com</div>
                     </div>
+                    <div class="mt-80 contact__footer-block">
+                        <div class="d-flex">
+                            <i class="fas fa-phone text-active fs-26"></i>
+                            <div class="text-active fs-22 ml-18">Phone:</div>
+                        </div>
+                        <div class="text-white fs-18 mt-16">+99890 229 41 60</div>
+                    </div>
+                    <div class="mt-80 contact__footer-block">
+                        <div class="d-flex">
+                            <i class="fas fa-map-marker text-active fs-26"></i>
+                            <div class="text-active fs-22 ml-18">Address:</div>
+                        </div>
+                        <div class="text-white fs-18 mt-16">Uzbekistan, Jizzax</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -683,7 +672,7 @@
                         </a>
                     </div>
                     <div>
-                        <h2 class="text-white fs-40">Let’s Talk?</h2>
+                        <h2 class="footer-title text-white fs-40">Let’s Talk?</h2>
                     </div>
                     <div>
                         <button class="btn-outline-active btn-lg">LET'S CHAT</button>
@@ -713,7 +702,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>

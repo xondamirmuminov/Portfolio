@@ -34,3 +34,23 @@ $(".about__slider").slick({
         }
       }]
 })
+
+
+var show = false;
+var navList =   document.querySelector('.header__list');
+var barsInner = document.querySelector('.header__inner-bars')
+var overflow = document.querySelector('body');
+
+function bars(){
+  if(show == true){
+    navList.classList.remove("header__list--active");
+    overflow.classList.remove("overflow");
+    barsInner.classList.remove("header__inner-bars--active");
+    show = false;
+  }else{
+    navList.classList.add("header__list--active");
+    overflow.classList.add("overflow");
+    barsInner.classList.add("header__inner-bars--active");
+    show = true;
+  }
+};
